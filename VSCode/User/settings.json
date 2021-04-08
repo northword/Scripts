@@ -1,0 +1,214 @@
+{
+//------------------------------VSCode Related----------------------------------
+    "workbench.colorTheme": "One Dark Pro",
+    "workbench.iconTheme": "material-icon-theme",
+    "workbench.colorCustomizations": {},
+    "git.autofetch": true,
+    "explorer.confirmDragAndDrop": false,
+    "explorer.confirmDelete": false,
+    "git.showPushSuccessNotification": true,
+    
+//------------------------------Markdown Related----------------------------------
+    "markdown.extension.print.absoluteImgPath": false,
+    "markdown.extension.toc.downcaseLink": false,
+    "markdownExtended.tocLevels": [
+        1,
+        2,
+        3
+    ],
+    "markdown.styles": [
+        ".vscode/vdoing-css.css"
+        // "file:///D:/OneDrive/文档/VSCode/vdoing-css.css"
+        // "https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    ],
+    "markdown-preview-enhanced.imageFolderPath": "./assets",
+    "vscode-markdown-it-container.containers": [     
+        "center",
+        "pagebreak"
+    ],
+    "markdown-preview-enhanced.automaticallyShowPreviewOfMarkdownBeingEdited": true,
+    "[markdown]": {
+        "editor.fontFamily": "Sarasa Mono SC, Noto Sans Mono CJK SC, monospace",
+        "editor.formatOnType": true,
+        "editor.formatOnSave": true,
+        "editor.defaultFormatter": "yzhang.markdown-all-in-one"
+    },
+    "markdownlint.config": {
+        "MD025": false // MD025 - Multiple top-level headings in the same document
+    },
+    "markdown-table-formatter.telemetry": false,
+
+//------------------------------Remote SSH Related----------------------------------
+    "remote.SSH.showLoginTerminal": true,
+    "remote.SSH.remotePlatform": {
+        "202.115.63.32": "linux",
+        "scu": "linux"
+    },
+    "remoteX11.SSH.privateKey": "C:\\Users\\Northword\\.ssh\\id_rsa",
+
+//------------------------------Terminal Related----------------------------------
+    "terminal.integrated.cursorBlinking": true,
+    "terminal.integrated.experimentalUseTitleEvent": true,
+    "terminal.integrated.shell.linux": "/bin/bash",
+    "terminalAllInOne.terminalTheme": "None",
+    "terminal.integrated.allowChords": false,
+
+    "code-runner.executorMap": {
+        "javascript": "node",
+        "java": "cd $dir && javac $fileName && java $fileNameWithoutExt",
+        "c": "cd $dir && gcc $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
+        "cpp": "cd $dir && g++ $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
+        "objective-c": "cd $dir && gcc -framework Cocoa $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
+        "php": "php",
+        "python": "set PYTHONIOENCODING=utf8 && C:/Users/Northword/AppData/Local/Programs/Python/Python39/python.exe",
+        "perl": "perl",
+        "perl6": "perl6",
+        "ruby": "ruby",
+        "go": "go run",
+        "lua": "lua",
+        "groovy": "groovy",
+        "powershell": "powershell -ExecutionPolicy ByPass -File",
+        "bat": "cmd /c",
+        "shellscript": "bash",
+        "fsharp": "fsi",
+        "csharp": "scriptcs",
+        "vbscript": "cscript //Nologo",
+        "typescript": "ts-node",
+        "coffeescript": "coffee",
+        "scala": "scala",
+        "swift": "swift",
+        "julia": "julia",
+        "crystal": "crystal",
+        "ocaml": "ocaml",
+        "r": "Rscript",
+        "applescript": "osascript",
+        "clojure": "lein exec",
+        "haxe": "haxe --cwd $dirWithoutTrailingSlash --run $fileNameWithoutExt",
+        "rust": "cd $dir && rustc $fileName && $dir$fileNameWithoutExt",
+        "racket": "racket",
+        "ahk": "autohotkey",
+        "autoit": "autoit3",
+        "dart": "dart",
+        "pascal": "cd $dir && fpc $fileName && $dir$fileNameWithoutExt",
+        "d": "cd $dir && dmd $fileName && $dir$fileNameWithoutExt",
+        "haskell": "runhaskell",
+        "nim": "nim compile --verbosity:0 --hints:off --run",
+        "lisp": "sbcl --script",
+        "kit": "kitc --run"
+    },
+    "code-runner.fileDirectoryAsCwd": true,
+    
+//------------------------------LaTeX Related----------------------------------
+    //添加LaTex Workshop右键菜单。
+    "latex-workshop.showContextMenu": true, 
+    //从使用的包中自动补全命令和环境
+    "latex-workshop.intellisense.package.enabled": true,
+    // PDF阅读方式
+    "latex-workshop.view.pdf.viewer": "tab",
+    // 使用上次的recipe编译组合
+    "latex-workshop.latex.recipe.default": "lastUsed",
+    // 用于反向同步的内部查看器的键绑定。ctrl/cmd +点击(默认)或双击
+    "latex-workshop.view.pdf.internal.synctex.keybinding": "double-click",
+    // 编译工具和命令
+    "latex-workshop.latex.tools": [
+        {
+            "name": "xelatex",
+            "command": "xelatex",
+            "args": [
+                "-synctex=1",
+                "-interaction=nonstopmode",
+                "-file-line-error",
+                "-pdf",
+                "%DOCFILE%"
+            ]
+        },
+        {
+            "name": "pdflatex",
+            "command": "pdflatex",
+            "args": [
+                "-synctex=1",
+                "-interaction=nonstopmode",
+                "-file-line-error",
+                "%DOCFILE%"
+            ]
+        },
+        {
+            "name": "bibtex",
+            "command": "bibtex",
+            "args": [
+                "%DOCFILE%"
+            ]
+        }
+    ],
+    // 配置编译链
+    "latex-workshop.latex.recipes": [
+        {
+            "name": "xelatex",
+            "tools": [
+                "xelatex"
+            ],
+        },
+        {
+            "name": "pdflatex",
+            "tools": [
+                "pdflatex"
+            ]
+        },
+        {
+            "name": "xe->bib->xe->xe",
+            "tools": [
+                "xelatex",
+                "bibtex",
+                "xelatex",
+                "xelatex"
+            ]
+        },
+        {
+            "name": "pdf->bib->pdf->pdf",
+            "tools": [
+                "pdflatex",
+                "bibtex",
+                "pdflatex",
+                "pdflatex"
+            ]
+        }
+    ],
+    "latex-workshop.latex.autoClean.run": "onBuilt", //注意结尾是 t 不是 d
+    //文件清理。此属性必须是字符串数组
+    "latex-workshop.latex.clean.fileTypes": [
+    "*.aux",
+    "*.bbl",
+    "*.blg",
+    "*.idx",
+    "*.ind",
+    "*.lof",
+    "*.lot",
+    "*.out",
+    "*.toc",
+    "*.acn",
+    "*.acr",
+    "*.alg",
+    "*.glg",
+    "*.glo",
+    "*.gls",
+    "*.ist",
+    "*.fls",
+    "*.log",
+    "*.fdb_latexmk",
+    ],
+    "[latex]": {
+        "editor.formatOnPaste": false,
+        "editor.suggestSelection": "recentlyUsedByPrefix",
+        "editor.wordWrap": "on"
+    },
+
+//------------------------------Others----------------------------------
+    "[javascript]": {
+        "editor.defaultFormatter": "vscode.typescript-language-features"
+    },
+    "[html]": {
+        "editor.defaultFormatter": "vscode.html-language-features"
+    },
+
+
+}
