@@ -1,4 +1,5 @@
 # Clash
 Clash/*
-!Clash/ACL4SSR_Online_Full_Northword.ini
+!Clash/*.ini
 !Clash/*.yaml
+!Clash/mkdir.bat
