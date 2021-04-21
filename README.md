@@ -2,22 +2,34 @@
 自用的各种乱七八糟的东西备份
 
 ```txt
-Northword@Yoga-Northword MINGW64 /d/Northword/Documents/GitHub/Scripts (main)
+Northword@Yoga-Northword MINGW64 /d/Code/Scripts (main)
 $ tree -l 2
 ▁
-D:\Northword\Documents\GitHub\Scripts
+D:\Code\Scripts
 ├── Clash
-|  └── ACL4SSR_Online_Full_Northword.ini
+|  ├── ACL4SSR_Online_Full_Northword.ini
+|  ├── cfw-settings.yaml
+|  ├── config.yaml
+|  ├── Country.mmdb
+|  ├── GeneralClashConfig.yaml
+|  ├── logs
+|  ├── mkdir.bat
+|  ├── profiles
+|  ├── README.md
+|  ├── service
+|  ├── subconverter
+|  ├── urldencoder
+|  └── wintun.dll
 ├── README.md
 ├── Typora
 |  └── themes
 └── VSCode
-   └── settings.json
+   └── User
 
-directory: 4 file: 3
+directory: 10 file: 9
 ```
 
-`Clash`：订阅转换的后端配置文件。
+`Clash`：CFW的Home Directory。[URL编码链接](northword.github.io/Scripts/Clash/urldencoder/index.html)
 
 `Typora/theme`：魔改的 Typora 主题。
 

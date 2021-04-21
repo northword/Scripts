@@ -1,5 +1,8 @@
 # Clash
-Clash/*
-!Clash/*.ini
-!Clash/*.yaml
-!Clash/mkdir.bat
+
+Clash/logs
+Clash/profiles
+Clash/service
+Clash/.*
+Clash/*.dll
+Clash/*.mmdb

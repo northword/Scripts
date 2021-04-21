@@ -1,0 +1,287 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="icon" href="./favicon.ico">
+    <title>URL encode - decode utility</title>
+    <meta name="description"
+        content="Utility to encode and decode URL. Get easy with javascript uri encode decode functions">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="Miquel Peix">
+
+    <link href="https://fonts.googleapis.com/css?family=Quicksand:300&display=swap" rel="stylesheet">
+    <style>
+        html {           
+            height: 100%;
+            font-family: 'Quicksand';
+        }
+        body{
+            margin: 0;           
+        }
+
+        header {
+            margin: 0 auto;
+            width: fit-content;
+        }
+        h1{
+            text-align: center;
+            padding: 0 5%;
+        }
+        #box-container {
+            display: flex;
+            flex-direction: column;
+            width: 80%;
+            margin: 0 auto;
+            max-width: 900px;
+            display: flex;
+            padding-bottom: 50px;
+        }
+
+        textarea {
+            width: 99%;
+            height: 20vh;
+            border-radius: 5px;
+            box-shadow: 1px 1px 2px 0 rgba(0, 0, 0, .15);
+        }
+
+        #message-box {
+            width: 90%;
+            background-color: #B9F6CA;
+            border-radius: 5px;
+            margin: 10px 0;
+            padding: 10px 5%;
+            border: 1px solid #00C853;
+            visibility: hidden;
+
+            webkit-transition: -webkit-box-shadow .25s;
+            transition: -webkit-box-shadow .25s;
+            transition: box-shadow .25s;
+            transition: box-shadow .25s, -webkit-box-shadow .25s;
+
+            color: #fff;
+            webkit-box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
+            box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
+            background-color: #26a69a;
+        }
+
+        #message-box p {
+            margin: 0;
+        }
+
+        #clear-container {
+            width: 100%;
+            display: flex;
+            justify-content: flex-end;
+            padding-top: 5px;
+        }
+
+        .button-green {
+            margin: 0;
+            padding: 0;
+            text-decoration: none;
+            color: #fff;
+            background-color: #26a69a;
+            text-align: center;
+            letter-spacing: .5px;
+            -webkit-transition: background-color .2s ease-out;
+            transition: background-color .2s ease-out;
+            cursor: pointer;
+            -webkit-transition: .3s ease-out;
+            transition: .3s ease-out;
+            position: relative;
+            cursor: pointer;
+            display: inline-block;
+            overflow: hidden;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            -webkit-tap-highlight-color: transparent;
+            vertical-align: middle;
+            font-size: 14px;
+            outline: 0;
+            border: none;
+            border-radius: 5px;
+            display: inline-block;
+            height: 36px;
+            line-height: 36px;
+            padding: 0 16px;
+            text-transform: uppercase;
+            vertical-align: middle;
+            -webkit-tap-highlight-color: transparent;
+            webkit-box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
+            box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
+        }
+
+        .button-green:hover {
+            background-color: #2bbbad;
+            -webkit-box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.14), 0 1px 7px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -1px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.14), 0 1px 7px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -1px rgba(0, 0, 0, 0.2);
+        }
+
+        #clear {
+            margin-left: 15px;
+        }
+
+        footer {
+            display: flex;
+            background-color: beige;
+            width: 100%;
+            height: 5vh;
+            justify-content: flex-end;
+            align-items: center;
+            position: fixed;
+            bottom: 0;
+        }
+
+        #site-created-by {
+            width: fit-content;
+            padding-right: 25px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Endoce Decode url tool</h>
+    </header>
+    <main id="box-container">
+        <div id="instructions" class="box">
+            <h2>Get URL encoded / decoded fast and easy</h2>
+            <p><strong>Paste</strong> in the box below the url encoded or decode.</p>
+            <p>The tool is smart enought to detect if the url is encoded or decoded to perform the inverse operation</p>
+        </div>
+        <div id="action" class="box">
+            <textarea id="url-text-area"></textarea>
+        </div>
+        <div id="message-box" class="box">
+            <p id="encoded-decoded-message"></p>
+            <p id="decoded-times"></p>
+        </div>
+        <div id="result" class="box">
+            <textarea id="text-area-result" readonly></textarea>
+        </div>
+        <div class="box" id="clear-container">
+            <button id="copy-result" class="button-green">Copy result</button>
+            <button id="clear" class="button-green">Clear</button>
+        </div>
+    </main>
+    <footer>
+        <div id="site-created-by">
+            Site created by:<b>James Bond</b>
+        </div>
+    </footer>
+    <script type="text/javascript">
+        var userInputTextArea = document.getElementById('url-text-area');
+        var clearButton = document.getElementById('clear');
+        var copyResultButton = document.getElementById('copy-result');
+        var textAreas = document.getElementsByTagName('textarea');
+        var textAreaResult = document.getElementById('text-area-result');
+        var messageBox = document.getElementById('message-box');
+        var decodedTimesMessage = document.getElementById('decoded-times');
+        //Clear fields
+        clearButton.onclick = function () {
+            for (index in textAreas)
+                textAreas[index].value = '';
+
+            messageBox.style.visibility = 'hidden';
+        }
+
+        copyResultButton.onclick = function () {
+            textAreaResult.select();
+            document.execCommand("copy");
+        }
+
+        function encodeDecode() {
+            debugger;
+            var result = '';
+            var decodedTimes = 0;
+            //We set a max loop to avoid infity loop in decoding function
+            var maxLoops = 20;
+            var reg = /%[0-9a-f]{2}/i;
+            var resultMessage = '';
+
+            messageBox.style.visibility = 'hidden';
+            let userInputValue = event.clipboardData.getData('Text');
+
+            if (reg.exec(userInputValue)) {
+                //Url is encoded
+                //Decoding loop
+                var partialResult = userInputValue;
+                do {
+                    partialResult = decodeURIComponent(partialResult);
+                    decodedTimes++;
+                } while (reg.exec(partialResult) && decodedTimes < maxLoops);
+                result = partialResult;
+                resultMessage = "Decoded!";
+                //Max allowed decoding loops reached.
+                if (decodedTimes >= maxLoops) {
+                    resultMessage = "Maximun number of decoded operations reached!";
+                }
+                if (decodedTimes > 1) {
+                    decodedTimesMessage.value = "The url has been decoded " + decodedTimes + " times";
+                }
+                console.log('encodedTimes: ' + decodedTimes);
+            } else {
+                //Url is not encoded --> encoding
+                result = encodeURIComponent(userInputValue);
+                resultMessage = "Encoded!";
+            }
+
+            //print results
+            document.getElementById('encoded-decoded-message').value = resultMessage;
+            textAreaResult.value = result;
+            document.getElementById('message-box').style.visibility = 'visible';
+            document.getElementById('encoded-decoded-message').innerHTML = resultMessage;
+        }
+        userInputTextArea.onpaste = encodeDecode(event);
+
+/*         userInputTextArea.onpaste = function encodeDecode(event) {
+            debugger;
+            var result = '';
+            var decodedTimes = 0;
+            //We set a max loop to avoid infity loop in decoding function
+            var maxLoops = 20;
+            var reg = /%[0-9a-f]{2}/i;
+            var resultMessage = '';
+
+            messageBox.style.visibility = 'hidden';
+            let userInputValue = event.clipboardData.getData('Text');
+
+            if (reg.exec(userInputValue)) {
+                //Url is encoded
+                //Decoding loop
+                var partialResult = userInputValue;
+                do {
+                    partialResult = decodeURIComponent(partialResult);
+                    decodedTimes++;
+                } while (reg.exec(partialResult) && decodedTimes < maxLoops);
+                result = partialResult;
+                resultMessage = "Decoded!";
+                //Max allowed decoding loops reached.
+                if (decodedTimes >= maxLoops) {
+                    resultMessage = "Maximun number of decoded operations reached!";
+                }
+                if (decodedTimes > 1) {
+                    decodedTimesMessage.value = "The url has been decoded " + decodedTimes + " times";
+                }
+                console.log('encodedTimes: ' + decodedTimes);
+            } else {
+                //Url is not encoded --> encoding
+                result = encodeURIComponent(userInputValue);
+                resultMessage = "Encoded!";
+            }
+
+            //print results
+            document.getElementById('encoded-decoded-message').value = resultMessage;
+            textAreaResult.value = result;
+            document.getElementById('message-box').style.visibility = 'visible';
+            document.getElementById('encoded-decoded-message').innerHTML = resultMessage;
+        }          
+ */    
+    </script>
+</body>
+
+</html>
