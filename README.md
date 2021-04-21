@@ -29,7 +29,7 @@ D:\Code\Scripts
 directory: 10 file: 9
 ```
 
-`Clash`：CFW的Home Directory。[URL编码链接](northword.github.io/Scripts/Clash/urldencoder/index.html)
+`Clash`：CFW的Home Directory。[URL编码链接](https://northword.github.io/Scripts/Clash/urldencoder/index.html)
 
 `Typora/theme`：魔改的 Typora 主题。
 
