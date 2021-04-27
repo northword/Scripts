@@ -1,8 +1,0 @@
-# Clash
-
-Clash/logs
-Clash/profiles
-Clash/service
-Clash/.*
-Clash/*.dll
-Clash/*.mmdb

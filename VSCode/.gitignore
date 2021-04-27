@@ -1,0 +1,5 @@
+# VSCode
+User/*
+!User/setting.json
+!User/keybindings.json
+!User/snippets
