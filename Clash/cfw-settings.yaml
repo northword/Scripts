@@ -99,3 +99,5 @@ trayText: ""
 trayColorTransparent: false
 editor: 0
 specifyHttpProxyProtocol: true
+hideUnselectableGroup: true
+connChainType: 2
