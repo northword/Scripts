@@ -101,3 +101,7 @@ editor: 0
 specifyHttpProxyProtocol: true
 hideUnselectableGroup: true
 connChainType: 2
+shortcutRunTrayScript: ""
+trayScriptManualRunTime: 1620703978563
+runTimeFormat: "hh : mm : ss"
+shortcutGlobalMode: ""
