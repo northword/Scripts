@@ -1,6 +1,6 @@
 mixed-port: 7890
 allow-lan: false
-external-controller: 127.0.0.1:60956
+external-controller: 127.0.0.1:49767
 secret: ''
 log-level: info
 
@@ -8,7 +8,8 @@ log-level: info
 # 支持通配符域名 (例如: *.clash.dev, *.foo.*.example.com )
 # 不使用通配符的域名优先级高于使用通配符的域名 (例如: foo.example.com > *.example.com > .example.com )
 # 注意: +.foo.com 的效果等同于 .foo.com 和 foo.com
-hosts: null
+hosts: 
+  'account.wondershare.com': 127.0.0.1 
 # '*.clash.dev': 127.0.0.1
 # '.dev': 127.0.0.1
 # 'alpha.clash.dev': '::1'
@@ -18,6 +19,7 @@ dns:
   ipv6: false
   listen: 0.0.0.0:53
   enhanced-mode: fake-ip # 模式：redir-host或fake-ip
+  use-hosts: true 
   fake-ip-range: 198.18.0.1/16
   fake-ip-filter: # fake ip 白名单列表，如果你不知道这个参数的作用，请勿修改
     - '*.lan'
