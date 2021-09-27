@@ -23,7 +23,7 @@ DOMAIN-SUFFIX,cambridge.org
 DOMAIN-SUFFIX,cas.org
 DOMAIN-SUFFIX,cell.com
 DOMAIN-SUFFIX,clarivate.com
-DOMAIN-SUFFIX,cnki.net
+# DOMAIN-SUFFIX,cnki.net
 DOMAIN-SUFFIX,cqvip.com
 DOMAIN-SUFFIX,csiro.au
 DOMAIN-SUFFIX,deepdyve.com
@@ -56,14 +56,14 @@ DOMAIN-SUFFIX,ovid.com
 DOMAIN-SUFFIX,oxfordartonline.com
 DOMAIN-SUFFIX,oxfordbibliographies.com
 DOMAIN-SUFFIX,oxfordmusiconline.com
-DOMAIN-SUFFIX,pkulaw.com
+# DOMAIN-SUFFIX,pkulaw.com
 DOMAIN-SUFFIX,pnas.org
 DOMAIN-SUFFIX,proquest.com
 DOMAIN-SUFFIX,readcube.com
 DOMAIN-SUFFIX,researchgate.net
 DOMAIN-SUFFIX,rsc.org
 DOMAIN-SUFFIX,sagepub.com
-#DOMAIN-SUFFIX,sci-hub.tw
+DOMAIN-SUFFIX,sci-hub.tw
 DOMAIN-SUFFIX,sciencedirect.com
 DOMAIN-SUFFIX,sciencemag.org
 DOMAIN-SUFFIX,scitation.org
