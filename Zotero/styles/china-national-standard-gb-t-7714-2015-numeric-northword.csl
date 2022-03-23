@@ -1,17 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- 
-	【Zotero样式】
+	【CSL Style for Zotero 】
 	Northword 修改自 GB/T-7714-2015 参考文献格式 bilan 版本。
 	Change Log：
-		210126: 修改了URL，仅网页类型显示URL
-		210126: 去掉了DOI，要恢复的话取消第258，306行的注释即可。
-		211119: 添加了参考文献列表对“English”语言的支持，原只有“en”。
+		210126: 修改了 URL，仅网页类型显示 URL
+		210126: 去掉了 DOI，要恢复的话取消第 258，306 行的注释即可。
+		211119: 添加了参考文献列表对 "English" 语言的支持，原只有 "en"。
 		220113: Upload to Github.
     220323: Format XML
  -->
 <style xmlns="http://purl.org/net/xbiblio/csl" version="1.0" class="in-text" default-locale="zh-CN" delimiter-precedes-last="always" demote-non-dropping-particle="never" initialize-with=" " name-delimiter=", " names-delimiter=". " name-as-sort-order="all" sort-separator=" ">
-  <!-- This style was edited with the Visual CSL Editor (https://editor.citationstyles.org/visualEditor/) 
-  -->
+  <!-- This style was edited with the Visual CSL Editor (https://editor.citationstyles.org/visualEditor/)  -->
   <info>
     <title>China National Standard GB/T 7714-2015-numeric-northword</title>
     <title-short>GB/T 7714-2015</title-short>
@@ -19,19 +18,15 @@
     <link href="https://raw.githubusercontent.com/northword/Scripts/main/Zotero/styles/china-national-standard-gb-t-7714-2015-numeric-northword.csl" rel="self" />
     <link href="http://www.std.gov.cn/gb/search/gbDetailed?id=71F772D8055ED3A7E05397BE0A0AB82A" rel="documentation" />
     <author>
-      <name>牛耕田</name>
-      <email>buffalo_d@163.com</email>
-    </author>
-    <contributor>
       <name>Northword</name>
       <website>https://github.com/northword</website>
-    </contributor>
+    </author>
     <category citation-format="numeric" />
     <category field="generic-base" />
     <summary>The Chinese GB/T7714-2015 numeric style</summary>
+    <published>2021-02-22</published>
     <updated>2022-3-23</updated>
-    <rights license="http://creativecommons.org/licenses/by-sa/3.0/">This work is licensed under a Creative Commons
-    Attribution-ShareAlike 3.0 License</rights>
+    <rights license="http://creativecommons.org/licenses/by-sa/3.0/">This work is licensed under a Creative Commons Attribution-ShareAlike 3.0 License</rights>
   </info>
   <locale xml:lang="zh-CN">
     <terms>
