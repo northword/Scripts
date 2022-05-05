@@ -1,0 +1,2 @@
+proxies:
+  - {name: UnblockNeteaseMusic, server: 162.14.117.74, port: 6004, type: http, uuid: 90a0cffa-32a6-4718-861b-c4930b273399}
